@@ -29,7 +29,6 @@ org_settings:
 
   org_info:
     org_name: Maddy Org
-
   webhook_settings:
     activities_webhook:
       enable_activities_webhook: true
