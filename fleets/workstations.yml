@@ -17,33 +17,33 @@
 name: "💻 Workstations"
 controls:
   setup_experience:
-    ###########################################################
-    # Configure the macOS setup experience
-    #
-    # (Optional) edit the automatic enrollment profile referenced
-    # here to change which items are skipped during macOS setup
-    # and other aspects of the end user's experience during
-    # their first few minutes with their new Mac.
-    #
-    # Note: This requires activating MDM in your Fleet instance.
-    #
-    # For more, see:
-    #   • https://fleetdm.com/guides/apple-mdm-setup
-    #   • https://fleetdm.com/docs/configuration/yaml-files#macos-setup
-    #   • https://developer.apple.com/documentation/devicemanagement/profile
-    #   • https://support.apple.com/guide/deployment/automated-device-enrollment-management-dep73069dd57/web
-    ###########################################################
-    # apple_setup_assistant: ../platforms/macos/enrollment-profiles/automatic-enrollment.dep.json
+  ###########################################################
+  # Configure the macOS setup experience
+  #
+  # (Optional) edit the automatic enrollment profile referenced
+  # here to change which items are skipped during macOS setup
+  # and other aspects of the end user's experience during
+  # their first few minutes with their new Mac.
+  #
+  # Note: This requires activating MDM in your Fleet instance.
+  #
+  # For more, see:
+  #   • https://fleetdm.com/guides/apple-mdm-setup
+  #   • https://fleetdm.com/docs/configuration/yaml-files#macos-setup
+  #   • https://developer.apple.com/documentation/devicemanagement/profile
+  #   • https://support.apple.com/guide/deployment/automated-device-enrollment-management-dep73069dd57/web
+  ###########################################################
+  # apple_setup_assistant: ../platforms/macos/enrollment-profiles/automatic-enrollment.dep.json
 
-    ###########################################################
-    # Uncomment to use single-sign on (SSO) to authenticate
-    # end users during first-time setup of new computers.
-    #
-    # Read more:
-    #   • https://fleetdm.com/docs/configuration/yaml-files#end-user-authentication
-    #   • https://fleetdm.com/guides/setup-experience#end-user-authentication
-    ###########################################################
-    # enable_end_user_authentication: true
+  ###########################################################
+  # Uncomment to use single-sign on (SSO) to authenticate
+  # end users during first-time setup of new computers.
+  #
+  # Read more:
+  #   • https://fleetdm.com/docs/configuration/yaml-files#end-user-authentication
+  #   • https://fleetdm.com/guides/setup-experience#end-user-authentication
+  ###########################################################
+  # enable_end_user_authentication: true
 
   ###########################################################
   # Configuration profiles
@@ -84,7 +84,8 @@ controls:
   # Read more here:
   #   • https://fleetdm.com/guides/enforce-disk-encryption
   ###########################################################
-  # enable_disk_encryption: true
+  enable_disk_encryption: true
+  enable_recovery_lock_password: true
 
   ###########################################################
   # Managed OS updates
@@ -98,9 +99,10 @@ controls:
   #   • https://fleetdm.com/guides/enforce-os-updates
   ###########################################################
   macos_updates:
-     deadline: "2026-07-30"
-     minimum_version: "26.4"
-#     update_new_hosts: true
+    deadline: "2026-07-30"
+    minimum_version: "26.4"
+
+  #     update_new_hosts: true
   # windows_updates:
   #   deadline_days: 7
   #   grace_period_days: 2
@@ -163,35 +165,35 @@ policies:
 ###########################################################
 software:
   fleet_maintained_apps:
-    # macOS apps
-    # …
-    # - slug: slack/darwin # Slack for macOS
-    #   self_service: true
-    #   setup_experience: true
-    #   categories:
-    #     - Communication
-    #     - Productivity
+  # macOS apps
+  # …
+  # - slug: slack/darwin # Slack for macOS
+  #   self_service: true
+  #   setup_experience: true
+  #   categories:
+  #     - Communication
+  #     - Productivity
 
-    # Windows apps
-    # …
-    # - slug: slack/windows # Slack for Windows
-    #   self_service: true
-    #   setup_experience: true
-    #   categories:
-    #     - Productivity
-    #     - Communication
-    #   labels_include_any:
-    #     - "x86-based Windows hosts"
+  # Windows apps
+  # …
+  # - slug: slack/windows # Slack for Windows
+  #   self_service: true
+  #   setup_experience: true
+  #   categories:
+  #     - Productivity
+  #     - Communication
+  #   labels_include_any:
+  #     - "x86-based Windows hosts"
 
   packages: # Custom packages (if any)
-    # macOS custom packages
-    # …
+  # macOS custom packages
+  # …
 
-    # Windows custom packages
-    # …
+  # Windows custom packages
+  # …
 
-    # Linux custom packages
-    # …
+  # Linux custom packages
+  # …
 
   app_store_apps: # Apps to install via VPP from the macOS App Store, if any
-    # …
+  # …
