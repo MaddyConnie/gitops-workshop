@@ -23,6 +23,10 @@ org_settings:
     ###########################################################
     transparency_url: https://catoftheday.com
 
+  host_expiry_settings:
+    host_expiry_enabled: true
+    host_expiry_window: 30
+
   server_settings:
     ###########################################################
     # The server URL where Fleet is running.
