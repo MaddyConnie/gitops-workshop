@@ -27,6 +27,9 @@ org_settings:
     host_expiry_enabled: true
     host_expiry_window: 30
 
+  org_info:
+    org_name: Maddy Org
+
   server_settings:
     ###########################################################
     # The server URL where Fleet is running.
