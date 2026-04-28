@@ -43,7 +43,6 @@ controls:
   ###########################################################
   apple_settings:
     configuration_profiles:
-      # … e.g.
       - path: ../platforms/ios/configuration-profiles/passcode-settings.json
         labels_exclude_any:
           - "C-Suite"
@@ -69,7 +68,7 @@ controls:
   #   minimum_version: "18.5"
   ipados_updates:
     deadline: "2026-07-30"
-    minimum_version: "26.2"
+    minimum_version: "26.4"
 
 ###########################################################
 # Apps to make available from the Apple App Store or Google Play
