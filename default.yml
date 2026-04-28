@@ -30,6 +30,11 @@ org_settings:
   org_info:
     org_name: Maddy Org
 
+  webhook_settings:
+    activities_webhook:
+      enable_activities_webhook: true
+      destination_url: https://webhook.site/73bb94f6-d285-4426-919c-eecbf6848940
+
   server_settings:
     ###########################################################
     # The server URL where Fleet is running.
