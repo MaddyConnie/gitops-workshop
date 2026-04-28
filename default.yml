@@ -12,6 +12,29 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 org_settings:
+  fleet_desktop:
+    ###########################################################
+    # Fleet Desktop is a free and open source tool that allows
+    # end users to see and manage their own devices enrolled in
+    # Fleet.  If you want to enable this for your end users, you
+    # can do so here.
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#fleet-desktop
+    ###########################################################
+    transparency_url: https://catoftheday.com
+
+  host_expiry_settings:
+    ###########################################################
+    # By default, Fleet will automatically "expire" (i.e. hide
+    # from the UI and exclude from reports) hosts that have not
+    # checked in in 90 days.  If you have a use case for
+    # changing this default, you can do so here.
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#host-expiry-settings
+    ###########################################################
+    host_expiry_enabled: true
+    host_expiry_window_days: 30
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -21,7 +44,7 @@ org_settings:
     # Read more:
     #   • https://fleetdm.com/docs/configuration/yaml-files#org-info
     ###########################################################
-    org_name: My organization
+    org_name: Maddy Org
 
   server_settings:
     ###########################################################
